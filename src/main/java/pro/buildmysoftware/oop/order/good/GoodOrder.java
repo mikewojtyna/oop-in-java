@@ -5,19 +5,19 @@ import org.joda.money.Money;
 import pro.buildmysoftware.oop.order.common.OrderLine;
 
 import java.math.RoundingMode;
-import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 public class GoodOrder {
 	private final Collection<OrderLine> orderLines;
 
 	public GoodOrder(final OrderLine... orderLines) {
-		this.orderLines = Arrays.asList(orderLines);
+		this.orderLines = List.of(orderLines);
 	}
 
 	public Money calculateTotalCost(final DiscountPolicy policy) {
 		final double discount = policy.discountFor(this);
-		return sum().multipliedBy(discount, RoundingMode.DOWN);
+		return sum().multipliedBy(discount, RoundingMode.HALF_EVEN);
 	}
 
 	private Money sum() {
