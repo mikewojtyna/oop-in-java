@@ -16,10 +16,16 @@
 	<description>OOP presentation examples</description>
 
 	<properties>
+		<joda-money.version>1.0.1</joda-money.version>
 		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.joda</groupId>
+			<artifactId>joda-money</artifactId>
+			<version>${joda-money.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>

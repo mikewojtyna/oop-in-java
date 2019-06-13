@@ -1,4 +1,4 @@
-package pro.buildmysoftware.oopinjava;
+package pro.buildmysoftware.oop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
